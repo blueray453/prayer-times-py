@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Prayer Times
+Comment=Islamic prayer time dashboard
+Exec=prayer-times-gui
+Icon=mosque
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=true

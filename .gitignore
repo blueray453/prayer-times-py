@@ -1,0 +1,48 @@
+# ---- Python bytecode / caches ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+*.egg
+
+# ---- Virtual environments ----
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# ---- Test / coverage ----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ---- App runtime data ----
+prayer_cache.json
+*.log
+
+# ---- Local config (keep the schema, ignore user data) ----
+# prayer-times-config.json is user data — uncomment next line if
+# you want it ignored for each developer.
+# prayer-times-config.json
+
+# ---- Build tooling ----
+.cache/
+*.bak

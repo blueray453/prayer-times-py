@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prayer-times"
+version = "0.1.0"
+description = "Hadith-based Islamic prayer time calculator (CLI + GUI)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Ismail", email = "ismail@example.com"}]
+keywords = ["islam", "prayer", "salah", "hadith", "fajr", "isha", "qibla"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Religion",
+]
+
+# ----- Runtime dependencies -----
+dependencies = [
+    "PySide6>=6.6.0",
+]
+
+# ----- Optional SPA extras -----
+[project.optional-dependencies]
+spa = [
+    "pandas>=2.0.0",
+    "pytz>=2024.1",
+    "pvlib>=0.10.0",
+]
+
+# ----- Console / GUI entry points -----
+[project.scripts]
+prayer-times     = "prayer_times.cli:main"
+prayer-times-gui = "prayer_times.gui:main"
+
+# ----- Package discovery -----
+[tool.setuptools.packages.find]
+include = ["prayer_times*"]
+
+# ----- Ship config.json inside the package -----
+[tool.setuptools.package-data]
+prayer_times = ["config.json"]
+
+# ----- Desktop entry and icon to <prefix>/share/ -----
+[tool.setuptools.data-files]
+"share/applications"                 = ["prayer-times-gui.desktop"]
+"share/icons/hicolor/256x256/apps"   = ["icons/mosque.png"]
