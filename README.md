@@ -1,3 +1,5 @@
+DISCLAIMER: I am not a scholar. this is for personal use. If you find any bug, please let me know.
+
 .If Edit
 pipx install --force --editable /media/ismail/SSDWorking/_Working/_MyProjects/prayer-times-py
 
