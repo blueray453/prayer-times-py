@@ -1,0 +1,50 @@
+.
+├── README.md
+├── archive
+│   ├── prayer-times-pcd-cli.py
+│   ├── prayer-times-regular-cli.py
+│   └── prayer-times-spa-cli.py
+├── build
+│   ├── bdist.linux-x86_64
+│   └── lib
+│       └── prayer_times
+│           ├── __init__.py
+│           ├── __main__.py
+│           ├── cli.py
+│           ├── config.json
+│           └── gui.py
+├── docs
+│   ├── A Sun-Based Framework for Islamic Prayer Times_ An Analysis of Prophetic Practice from Sahih Hadith.md
+│   ├── A Sun-Based Framework for Islamic Prayer Times_ An Analysis of Prophetic Practice from Sahih Hadith.pdf
+│   ├── HADITH_REFERENCEv1.md
+│   ├── HADITH_REFERENCEv2.md
+│   ├── Prophetic Prayer Timings Report 1.pdf
+│   ├── VARIABLES.md
+│   └── prayer-times-pcd-cli.md
+├── icons
+│   └── mosque.png
+├── install-desktop.sh
+├── prayer-times-gui.desktop
+├── prayer_times
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-313.pyc
+│   │   ├── __main__.cpython-313.pyc
+│   │   ├── cli.cpython-313.pyc
+│   │   └── gui.cpython-313.pyc
+│   ├── cli.py
+│   ├── config.json
+│   └── gui.py
+├── prayer_times.egg-info
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   ├── dependency_links.txt
+│   ├── entry_points.txt
+│   ├── requires.txt
+│   └── top_level.txt
+├── pyproject.toml
+├── requirements.txt
+└── tree.txt
+
+11 directories, 37 files
