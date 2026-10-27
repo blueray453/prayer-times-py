@@ -21,11 +21,12 @@ classifiers = [
 ]
 dependencies = [
     "PySide6>=6.6.0",
+    "pandas>=2.0.0",
+    "pytz>=2024.1",
+    "pvlib>=0.10.0",
 ]
 
 [project.optional-dependencies]
-# Needed only for the "PCD + NREL SPA" mode.
-spa = ["pandas>=2.0.0", "pytz>=2024.1", "pvlib>=0.10.0"]
 dev = ["build", "ruff"]
 
 [project.scripts]

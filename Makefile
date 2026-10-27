@@ -27,10 +27,10 @@ help:  ## Show this help
 $(VENV)/.stamp: pyproject.toml
 	python3 -m venv $(VENV)
 	$(VENV)/bin/pip install -U pip
-	$(VENV)/bin/pip install -e '.[spa,dev]'
+	$(VENV)/bin/pip install -e '.[dev]'
 	touch $@
 
-dev: $(VENV)/.stamp  ## Create venv and install in editable mode (with SPA extras)
+dev: $(VENV)/.stamp  ## Create venv and install in editable mode
 
 run: dev  ## Run the GUI from source (no system install)
 	$(PY) -m $(PKG)
@@ -39,13 +39,13 @@ run-cli: dev  ## Show CLI help from source (pass ARGS="--lat ... ")
 	$(PY) -m $(PKG).cli $(ARGS)
 
 # ---------- deploy to this machine (pipx) ----------
-install:  ## Install via pipx (+SPA extras) + menu entry + icon
-	pipx install --force ".[spa]"
+install:  ## Install via pipx
+	pipx install --force .
 	$(MAKE) desktop
 	@echo "Installed. Launch with '$(GUI)' or from the app menu."
 
 install-dev:  ## Same as install, but editable (code changes apply live)
-	pipx install --force --editable ".[spa]"
+	pipx install --force --editable .
 	$(MAKE) desktop
 
 desktop:  ## Install .desktop file and icon (absolute Exec path)
