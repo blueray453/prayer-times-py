@@ -1,0 +1,30 @@
+Source: prayer-times
+Section: utils
+Priority: optional
+Maintainer: Ismail <ismail@example.com>
+Rules-Requires-Root: no
+Standards-Version: 4.7.0
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-setuptools (>= 77),
+
+Package: prayer-times
+Architecture: all
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+ python3-pyside6.qtcore,
+ python3-pyside6.qtgui,
+ python3-pyside6.qtwidgets,
+Recommends:
+ python3-pandas,
+ python3-tz,
+ python3-pvlib,
+Description: Hadith-based Islamic prayer time calculator
+ Computes prayer windows and the three forbidden intervals from solar
+ geometry, following the hadith literature. Provides a command-line tool
+ (prayer-times) and a Qt GUI (prayer-times-gui) with fixed-angle, PCD
+ dynamic-angle and NREL SPA modes. SPA mode needs pandas, pytz and pvlib.

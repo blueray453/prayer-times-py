@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Prayer Times
+GenericName=Prayer Time Calculator
+Comment=Hadith-based Islamic prayer time calculator
+Exec=prayer-times-gui
+Icon=prayer-times
+Terminal=false
+Categories=Utility;Qt;
+Keywords=islam;prayer;salah;fajr;isha;hadith;
+StartupNotify=true
